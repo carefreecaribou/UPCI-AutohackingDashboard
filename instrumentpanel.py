@@ -1,7 +1,7 @@
 import time
 
 def accelerate(c, v=False):
-	c.setCanBaud(CAN_125KBPS)
+	c.setCanBaud(13)
 	for i in range(0, 90):
 		str = "\xc9\x5f\x6b\x4d\x4a\x48" + chr(i) + "\xac"
 		c.CANxmit(0x110, str)
